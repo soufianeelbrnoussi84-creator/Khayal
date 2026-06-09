@@ -83,6 +83,17 @@ function confirmOrder() {
         },
         body: JSON.stringify(data)
     })
+    .then(response => {
+    console.log(response.status);
+    return response.json();
+    })
+    .then(data => {
+    console.log(data);
+    })
+    .catch(error => {
+    console.error(error);
+    });
+
 
     alert("Thanks for your! We will contact you soon")
     window.location.href = "index.html";
