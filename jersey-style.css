@@ -175,11 +175,6 @@ button{
     transition: all 0.2s ease;
 }
 
-.size-btn:hover {
-    background: #1a1a1a;
-    color: white;
-    border-color: #1a1a1a;
-}
 
 #orderBtn {
     width: 100%;
