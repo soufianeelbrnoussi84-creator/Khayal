@@ -28,56 +28,75 @@
             <img src="pictures/red-morocco.png" alt="Red Morocco Jersey">
             <h3 class="product-title">Red Maroccain Jersey </h3>
             <h4 class="price">399 MAD</h4>
-            <button onclick="window.location.href='order.html?product_id=1'">QUICK ADD</button>
+            <button onclick="showProduct('Red Maroccain Jersey', '399 MAD', 'pictures/red-morocco.png', '1')">QUICK ADD</button>
             </div>
 
         <div class="product-card">
             <img src="pictures/white_jersey.png" alt="White Morocco Jersey">
             <h3 class="product-title">White Maroccain Jersey</h3>
             <h4 class="price">399 MAD</h4>
-            <button onclick="window.location.href='order.html?product_id=2'">QUICK ADD</button>
+            <button onclick="showProduct('White Maroccain Jersey', '399 MAD', 'pictures/white_jersey.png', '2')">QUICK ADD</button>
         </div>
 
         <div class="product-card">
             <img src="pictures/short.png" alt="red-short">
             <h3 class="product-title">Red Maroccain Short</h3>
             <h4 class="price">229 MAD</h4>
-            <button onclick="window.location.href='order.html?product_id=3'">QUICK ADD</button>
+            <button onclick="showProduct('Red Maroccain Short', '229 MAD', 'pictures/short.png', '3')">QUICK ADD</button>
         </div>
 
         <div class="product-card">
             <img src="pictures/tracksuit-black.png" alt="tracksuit-black">
             <h3 class="product-title">Black Maroccain Tracksuit</h3>
             <h4 class="price">399 MAD</h4>
-            <button onclick="window.location.href='order.html?product_id=4'">QUICK ADD</button>
+            <button onclick="showProduct('Red Maroccain Tracksuit', '399 MAD', 'pictures/tracksuit-black.png', '4')">QUICK ADD</button>
         </div>
 
         <div class="product-card">
             <img src="pictures/red-tracksuit.png" alt="tracksuit-red">
             <h3 class="product-title">Red Maroccain Tracksuit</h3>
             <h4 class="price">399 MAD</h4>
-            <button onclick="window.location.href='order.html?product_id=5'">QUICK ADD</button>
+            <button onclick="showProduct('Red Maroccain Tracksuit', '399 MAD', 'pictures/red-tracksuit.png', '5')">QUICK ADD</button>
         </div>
         <div class="product-card">
             <img src="pictures/white-hat.png" alt="white-hat">
             <h3 class="product-title">White Maroccain Hat</h3>
             <h4 class="price">149 MAD</h4>
-            <button onclick="window.location.href='order.html?product_id=8'">QUICK ADD</button>
+            <button onclick="showProduct('White Maroccain Hat', '149 MAD', 'pictures/white-hat.png', '8')">QUICK ADD</button>
         </div> 
         <div class="product-card">
             <img src="pictures/pants.png" alt="pants">
             <h3 class="product-title">Black Maroccain Pant</h3>
             <h4 class="price">399 MAD</h4>
-            <button onclick="window.location.href='order.html?product_id=7'">QUICK ADD</button>
+            <button onclick="showProduct('Black Maroccain Pant', '399 MAD', 'pictures/pants.png', '7')">QUICK ADD</button>
         </div>
         <div class="product-card">
             <img src="pictures/together.png" alt="pants">
             <h3 class="product-title">Black Maroccain Tracksuit</h3>
             <h4 class="price">739 MAD</h4>
-            <button onclick="window.location.href='order.html?product_id=6'">QUICK ADD</button>
+            <button onclick="showProduct('Black Maroccain Tracksuit', '739 MAD', 'pictures/together.png', '6')">QUICK ADD</button>
         </div>      
     </div>
     </div>
     <div class="footer"></div>
+    <script src="jersey.js"></script>
+
+    <div id="sidebar" class="sidebar">
+         <button onclick="hideSidebar()">✕</button>
+         <img id="sidebarImg" src="" alt="">
+         <h2 id="sidebarName"></h2>
+         <h3 id="sidebarPrice"></h3>
+         <div class="size-options">
+        <button class="size-btn">S</button>
+        <button class="size-btn">M</button>
+        <button class="size-btn">L</button>
+        <button class="size-btn">XL</button>
+        <button class="size-btn">XXL</button>
+        <button class="size-btn">XXXL</button>
+        <button class="size-btn">XXXXL</button>
+        </div>
+        <button id="orderBtn">Order Now</button>
+    </div>
+
 </body>
 </html>
