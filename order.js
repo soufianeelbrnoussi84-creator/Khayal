@@ -92,12 +92,12 @@ function confirmOrder() {
     })
     .then(data => {
     console.log(data);
+    alert("Thanks for your! We will contact you soon")
+    window.location.href = "index.html";
     })
     .catch(error => {
     console.error(error);
+    alert("Something went wrong, please try again!")
     });
 
-
-    alert("Thanks for your! We will contact you soon")
-    window.location.href = "index.html";
 }
