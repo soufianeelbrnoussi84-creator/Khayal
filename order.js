@@ -100,11 +100,4 @@ function confirmOrder() {
     alert("Something went wrong, please try again!")
     });
 
-    const response = await fetch(url, options);
-
-console.log("Status:", response.status);
-
-const data = await response.json();
-console.log(data);
-
 }
