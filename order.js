@@ -62,6 +62,8 @@ function confirmOrder() {
 
     let urlParams = new URLSearchParams(window.location.search)
     let productId = urlParams.get("product_id")
+    let size = urlParams.get("size")        
+    let quantity = urlParams.get("quantity")
 
 
     let data = {
@@ -73,7 +75,8 @@ function confirmOrder() {
         country: "Morocco",
         address: address,
         product_id: parseInt(productId),
-        quantity: 1
+        size: size,             
+        quantity: parseInt(quantity)
     }
 
     fetch("https://khayal-api-production.up.railway.app/create_order",{
