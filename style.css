@@ -1,200 +1,223 @@
+:root{
+    --primary:#6d4427;
+    --secondary:#b2a493;
+    --dark:#1a1a1a;
+    --light:#ffffff;
+
+    --shadow-sm:0 5px 15px rgba(0,0,0,.15);
+    --shadow-lg:0 15px 35px rgba(0,0,0,.25);
+
+    --transition:.3s ease;
+}
+
+/* BODY */
+
 body{
-    text-align: center  ;
-    color: white;
-    background-image: url(pictures/khayal.png);
-    background-size: cover;/*Makes the image cover the entire page no matter the screen size. It might crop the image slightly but there will never be empty spaces.*/
-    background-position: center;/*Centers the image — so the most important part of the image (the middle) is always visible even if it gets cropped.*/
-    background-repeat: no-repeat;/*By default if an image is smaller than the screen, it repeats like a tile pattern. This tells the browser — show it once only, don't repeat*/
-    background-attachment: fixed;/*This creates a parallax effect — when you scroll down, the background image stays fixed while the content moves over it. Very modern and professional looking!*/
-    background-color: #333; 
+    margin:0;
+    text-align:center;
+    color:white;
+    font-family:'Poppins', sans-serif;
+
+    background-image:url(pictures/khayal.png);
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-color:#333;
 }
 
+/* NAVBAR */
 
-button{
-    background-color:rgb(80, 78, 78);
-    color:rgb(178, 164, 147);
-    border: none;
-    padding: 12px;
-    border-radius: 10%;
-    font-size: medium;
-}
-button:hover{
-    color:rgb(80, 78, 78);
-    background-color: rgb(178, 164, 147);
+.navbar{
+    display:flex;
+    justify-content:center;
+    padding:25px 0;
 }
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    padding: 20px 0;
+.title{
+    margin:0;
 }
 
-.title {
-    margin: 0;
+.title img{
+    width:230px;
+    transition:var(--transition);
 }
 
-.title img {
-    width: 50%;
-    max-width: 500px;
-    min-width: 250px;
-    height: auto;
+.title img:hover{
+    transform:scale(1.05);
 }
 
+/* HERO */
 
 .hero{
-    padding: 100px;
-    height: 75px;
+    padding:80px 20px;
 }
 
-.hero h2 {
-    font-size: 38px;
+.hero h2{
+    font-size:42px;
+    margin:0;
+    text-shadow:0 3px 10px rgba(0,0,0,.5);
 }
 
-.product-card img{
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    padding-bottom: 10px;   
+/* BUTTON */
+
+button{
+    background:linear-gradient(
+        135deg,
+        #6d4427,
+        #4f311d
+    );
+    color:white;
+    border:none;
+    padding:14px 26px;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+    transition:var(--transition);
+    box-shadow:var(--shadow-sm);
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-lg);
+}
+
+/* PRODUCTS */
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    padding:20px;
+}
+
+.product-card{
+    background:rgba(0,0,0,.65);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    overflow:hidden;
+    padding:20px;
+    transition:var(--transition);
+    box-shadow:var(--shadow-sm);
 }
 
 .product-card:hover{
-    transform: scale(1.03);
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-lg);
 }
 
-
-.product-card{
-   transition: transform 0.3s ease;
-   background-color: rgba(0, 0, 0, 0.623);  
-   border-radius: 10px;
-   overflow: hidden;
-   padding-bottom: 15px;
-   padding: 20px;
-   display: flex;
-   justify-content: space-evenly;
+.product-card img{
+    width:100%;
+    height:300px;
+    object-fit:contain;
+    margin-bottom:15px;
+    transition:var(--transition);
 }
 
-.product-grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.product-card:hover img{
+    transform:scale(1.05);
 }
 
-
+/* LOGO */
 
 .logo{
-    width: 190px;
-    
-    
+    width:190px;
 }
 
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: 2fr;
-    }
-}
+/* FOOTER */
 
-@media (max-width: 768px) {
-    .navbar a {
-        font-size: 14px;
-        margin-left: 15px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .navbar a {
-        font-size: 14px;
-        margin-left: 15px;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .hero h2 {
-        font-size: 24px;
-    }
-}
-
-
-
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns:1fr;
-    }
-    .navbar a {
-        font-size: 18px;
-        margin-left: 20px;
-        margin: 1px;
-        padding: 4px;
-    }
-    .hero {
-        padding: 5px;
-    }
-    .hero h2 {
-        font-size: 24px;
-    }
-}
-
-
-.title img{
-width: 170px;
-}
-
-
-.footer {
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 45px;
+.footer{
+    padding:60px 20px;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
 }
 
 .contact,
-.social-media {
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 15px;
-    width: 250px;
-    text-align: center;
-    transition: 0.3s;
+.social-media{
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    width:250px;
+    text-align:center;
+    transition:var(--transition);
 }
 
 .contact:hover,
-.social-media:hover {
-    transform: translateY(-5px);
+.social-media:hover{
+    transform:translateY(-5px);
 }
 
 .contact h2,
-.social-media h2 {
-    color: #e63946;
-    margin-bottom: 20px;
+.social-media h2{
+    color:#e63946;
+    margin-bottom:20px;
 }
 
 .contact a,
-.social-media a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    margin: 10px 0;
+.social-media a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    margin:10px 0;
+    transition:var(--transition);
 }
 
-@media (max-width: 768px) {
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+.contact a:hover,
+.social-media a:hover{
+    color:#b2a493;
+}
+
+/* COPYRIGHT */
+
+.copyright{
+    text-align:center;
+    padding:15px;
+    background:rgba(0,0,0,.6);
+    color:white;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .title img{
+        width:140px;
+    }
+
+    .hero{
+        padding:40px 15px;
+    }
+
+    .hero h2{
+        font-size:26px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+        padding:15px;
+    }
+
+    .product-card{
+        padding:15px;
+    }
+
+    .product-card img{
+        height:220px;
+    }
+
+    .footer{
+        flex-direction:column;
+        align-items:center;
     }
 
     .contact,
-    .social-media {
-        width: 90%;
-        max-width: 350px;
-        padding: 10px;
+    .social-media{
+        width:90%;
+        max-width:350px;
     }
-}
-
-.copyright {
-    text-align: center;
-    padding: 15px;
-    color: white;
-    background-color: rgba(0,0,0,0.5);
 }
